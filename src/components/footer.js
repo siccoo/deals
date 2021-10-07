@@ -11,11 +11,14 @@ export const AppFooter = () => {
           style={{ padding: "0 10px" }}
         >
           <div className="row justify-content-lg-between">
+            <div className="col-md-">
+              
+            </div>
             <div className="col-md-3">
               <div className="mb-4">
                 <h2 className="white-text">Contact Us</h2>
-                <p className="white-text mt-4 text-left">
-                  Lorem ipsum dolor sit amet,Aenean vel purus ligula
+                <p className="white-text mt-4">
+                  Lorem ipsum dolor sit amet, Aenean vel purus ligula
                 </p>
               </div>
               {/* <!-- End Logo -->
@@ -114,12 +117,11 @@ export const AppFooter = () => {
             className="d-none d-lg-block white-text"
             style={{ padding: "1rem 0" }}
           >
-            © {new Date().getFullYear()} Itex Power - All Rights Reserved.
+            © {new Date().getFullYear()} All Rights Reserved.
           </p>
 
           <p className="d-lg-none white-text" style={{ padding: "1rem 0" }}>
-            © {new Date().getFullYear()} Itex Power- <br />
-            All Rights Reserved.
+            © {new Date().getFullYear()} All Rights Reserved.
           </p>
         </div>
       </div>

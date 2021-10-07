@@ -69,15 +69,6 @@ const AppHeader = () => {
               <div className="navbar-body header-abs-top-inner">
                 <ul className="navbar-nav">
                   <li className="hs-has-mega-menu navbar-nav-item ml-5 mt-3 mb-3">
-                    <a
-                      id="homeMegaMenu"
-                      className="hs-mega-menu-invoker primary-text"
-                      href="/#contact-section"
-                    >
-                      Contact Us
-                    </a>
-                  </li>
-                  <li className="hs-has-mega-menu navbar-nav-item ml-5 mt-3 mb-3">
                     <Link to='/'
                       id="homeMegaMenu"
                       className="hs-mega-menu-invoker primary-text "

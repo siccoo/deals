@@ -71,6 +71,7 @@ label {
 }
 .white-text {
   color: var(--white-color) !important;
+  text-align: left;
 }
 .black-text {
   color: #656262 !important;
