@@ -42,6 +42,7 @@
 }
 .primary-text {
   font-size: var(--small-font-size);
+  color: var(--primary-color) !important;
 }
 .nav-footer,
 .media {

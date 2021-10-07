@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "../assets/css/header.css";
+import PowerDealsLogo from "../assets/img/power-logo.png";
 
 const AppHeader = () => {
   // const location = useLocation();
@@ -23,7 +24,7 @@ const AppHeader = () => {
         <div id="logoAndNav" className="container">
           <nav className="js-mega-menu navbar navbar-expand-lg mb-4">
             <Link className="navbar-brand" to="/" aria-label="Front">
-              <h3 className="black-text">LOGO</h3>
+              <img src={PowerDealsLogo} className="power-logo" alt="power-logo" />
             </Link>
 
             <button

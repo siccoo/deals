@@ -62,7 +62,7 @@ label {
   background-color: #fff;
 }
 .btn-join {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   background-color: var(--white-color);
   border: 1px solid var(--primary-color);
   border-radius: 20px;
