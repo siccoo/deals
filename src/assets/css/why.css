@@ -133,7 +133,22 @@
 
 .home-note-section{
   background:#F9F9F9;
-  padding: 50px 100px;
+  padding: 20px 50px 100px; 
+}
+
+.home-note-paragraph-text {
+  letter-spacing: 0px;
+  color: #6E361B;
+  text-transform: capitalize;
+  opacity: 1;
+  text-align: left !important;
+  margin-bottom: 50px !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .home-note-paragraph-text {
+    margin-bottom: 20px !important;
+  }
 }
 
 .home-note-row-left{

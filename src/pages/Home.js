@@ -38,7 +38,9 @@ const Home = () => {
     <Landing/>
         <div id="section10" className="demo is-hidden-mobile">
           <a href="#about">
-            <span></span>
+            <span>
+              {/* <small>Scroll Down</small> */}
+            </span>
           </a>
         </div>
       </section>

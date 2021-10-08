@@ -2,58 +2,68 @@ import React from "react";
 import "../assets/css/why.css";
 import "../assets/css/header.css";
 
-
 const Why = () => {
   return (
-
     <div className="home-note-section">
-     <div className="home-note-row-left">
-     <div className="home-note-col">
-      <div className="home-note-div">
-      <div className="note-img-1"></div>
-      <div className="note-text">
-        <div className="note-text-header">Pay Less Get More Units</div>
-        <div className="note-text-sub">Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr</div>
+      <p className="home-note-paragraph-text">Why Power Deals?</p>
+      <div className="home-note-row-left">
+        <div className="home-note-col">
+          <div className="home-note-div">
+            <div className="note-img-1"></div>
+            <div className="note-text">
+              <div className="note-text-header">Pay Less Get More Units</div>
+              <div className="note-text-sub">
+                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className="home-note-row-right">
+        <div className="home-note-col">
+          <div className="home-note-div">
+            <div className="note-img-2"></div>
+            <div className="note-text">
+              <div className="note-text-header">
+                Complete Transactions in Seconds
+              </div>
+              <div className="note-text-sub">
+                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
-     </div>
-     <div className="home-note-row-right">
-     <div className="home-note-col">
-      <div className="home-note-div">
-      <div className="note-img-2"></div>
-      <div className="note-text">
-        <div className="note-text-header">Complete Transactions in Seconds</div>
-        <div className="note-text-sub">Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr</div>
+      <div className="home-note-row-left">
+        <div className="home-note-col">
+          <div className="home-note-div">
+            <div className="note-img-3"></div>
+            <div className="note-text">
+              <div className="note-text-header">
+                Commission for Every Purchase
+              </div>
+              <div className="note-text-sub">
+                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className="home-note-row-right">
+        <div className="home-note-col">
+          <div className="home-note-div">
+            <div className="note-img-4"></div>
+            <div className="note-text">
+              <div className="note-text-header">Get Power Deals</div>
+              <div className="note-text-sub">
+                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
-     </div>
-     <div className="home-note-row-left">
-     <div className="home-note-col">
-      <div className="home-note-div">
-      <div className="note-img-3"></div>
-      <div className="note-text">
-        <div className="note-text-header">Commission for Every Purchase</div>
-        <div className="note-text-sub">Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr</div>
-      </div>
-      </div>
-     </div>
-     </div>
-     <div className="home-note-row-right">
-     <div className="home-note-col">
-      <div className="home-note-div">
-      <div className="note-img-4"></div>
-      <div className="note-text">
-        <div className="note-text-header">Get Power Deals</div>
-        <div className="note-text-sub">Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr</div>
-      </div>
-      </div>
-     </div>
-     </div>
-     </div>
-      
-  
+    </div>
+
     // <section className="why">
     //   <div className="container">
     //     <div className="col-lg-12">
