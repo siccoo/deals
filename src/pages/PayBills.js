@@ -11,38 +11,39 @@ import AppHeader from '../components/navbar.js';
 import { AppFooter } from "../components/footer.js";
 const PayBills = () => {
 
-  let { id } = useParams(); 
-
-  const providers = [
-    {
-      'id': 1,
-      'title': 'IBEDC',
-      'img_src': ibedc
-    },
-    {
-      'id': 2,
-      'title': 'AEDC',
-      'img_src': aedc
-    },
-    {
-      'id': 3,
-      'title': 'IBEDC',
-      'img_src': ibedc
-    },
-    {
-      'id': 4,
-      'title': 'IBEDC',
-      'img_src': ibedc
-    }
-  ]
+  let { id } = useParams();
 
   const [isfilledForm, setIsFilledForm] = useState(false);
   const [providerImage, setProviderImage] = useState();
 
-  useEffect(() => {
-    const provider = providers.find((result) => result.id === Number(id) ).img_src
+  useEffect(() => { 
+
+    const providers = [
+      {
+        'id': 1,
+        'title': 'IBEDC',
+        'img_src': ibedc
+      },
+      {
+        'id': 2,
+        'title': 'AEDC',
+        'img_src': aedc
+      },
+      {
+        'id': 3,
+        'title': 'IBEDC',
+        'img_src': ibedc
+      },
+      {
+        'id': 4,
+        'title': 'IBEDC',
+        'img_src': ibedc
+      }
+    ]
+
+    const provider = providers.find((result) => result.id === Number(id)).img_src
     setProviderImage(provider)
-  }, [providers, id])
+  }, [id])
 
   function goToConfirmScreen(){
    setIsFilledForm(true)
