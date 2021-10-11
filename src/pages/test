@@ -1,0 +1,36 @@
+import React from 'react'
+import almost from "../assets/img/almost.svg";
+import ServiceCard from "../components/ServiceCard";
+import "../assets/css/home.css"
+import  "../assets/css/bills.css";
+const Bills = () => {
+    return (
+      <div>
+      <div className="banner-picture-bills">
+        <div className="banner-cover">
+          
+          <div className="banner-writeup">
+            <div className="banner-heading">
+              <div className="banner-header">Looking for a great value of electricity</div>
+              <div className="banner-sub">Lorem ipsum dolor sit amet,Aenean vel purus ligula,Lorem ipsum dolor sit amet,Aenean vel purus ligula</div>
+            </div>
+            <div className="banner-illustration">
+               <img
+              src={almost}
+              alt=""
+              className="img-fluid"
+              style={{ width: "60%" }}
+            />
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div className="banner-form">
+          {/* <ServiceCard /> */}
+        </div>
+       </div>
+    )
+}
+
+export default Bills;

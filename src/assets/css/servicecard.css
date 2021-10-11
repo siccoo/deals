@@ -1,0 +1,28 @@
+.bill-card {
+  padding: 30px 10px;
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+.card-head {
+  color: black;
+}
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+.grid-child {
+  border: 1px solid;
+  background-color: var(--white-color);
+  height: 60px;
+  border-radius: 4px;
+}
+.flex-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
