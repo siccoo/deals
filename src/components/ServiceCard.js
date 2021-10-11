@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "../assets/css/servicecard.css";
 import {Link} from 'react-router-dom'
 import ibedc from "../assets/img/IBEDC.png"
@@ -28,7 +28,7 @@ const ServiceCard = () => {
     }
   ]
 
-  const [ billers, setBillers] = useState(providers);
+  // const [ billers, setBillers] = useState(providers);
   return (
    <>
    {/* {
@@ -42,7 +42,7 @@ const ServiceCard = () => {
         <p className="card-head text-left mb-3">Please select Preferred Service</p>
           <div className="grid-parent">
      {
-       billers.map( (item) => {
+       providers.map( (item) => {
 
         return <div className="grid-child">
              <Link to={'/bills/' + item.id}>     <div className="flex-card">

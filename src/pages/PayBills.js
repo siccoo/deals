@@ -40,9 +40,9 @@ const PayBills = () => {
   const [providerImage, setProviderImage] = useState();
 
   useEffect(() => {
-  const provider = providers.find( (result) => { return result.id == id }).img_src
-  setProviderImage(provider)
-  }, [])
+    const provider = providers.find((result) => result.id === Number(id) ).img_src
+    setProviderImage(provider)
+  }, [providers, id])
 
   function goToConfirmScreen(){
    setIsFilledForm(true)
