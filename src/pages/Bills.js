@@ -1,19 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import almost from "../assets/img/almost.svg";
-import Arrows from "../assets/img/arrows.svg";
+// import Arrows from "../assets/img/arrows.svg";
 import ServiceCard from "../components/ServiceCard";
 import "../assets/css/home.css";
-import showpass from "../assets/img/showpass.svg";
-import hidepass from "../assets/img/hidepass.svg";
+// import showpass from "../assets/img/showpass.svg";
+// import hidepass from "../assets/img/hidepass.svg";
 import  "../assets/css/bills.css";
 // import ServiceCard from "../components/ServiceCard";
 import "../assets/css/home.css"
 import AppHeader from '../components/navbar.js';
 import { AppFooter } from "../components/footer.js";
+
 const Login = () => {
 
-  const [pwd, setPwd] = useState("");
-  const [isRevealPwd, setIsRevealPwd] = useState(false);
+  // const [pwd, setPwd] = useState("");
+  // const [isRevealPwd, setIsRevealPwd] = useState(false);
   return (
     <div>
         <AppHeader></AppHeader>

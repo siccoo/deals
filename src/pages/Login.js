@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import almost from "../assets/img/almost.svg";
+// import almost from "../assets/img/almost.svg";
 import Arrows from "../assets/img/arrows.svg";
 import { Link } from "react-router-dom";
 import "../assets/css/home.css";
