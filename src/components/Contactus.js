@@ -9,7 +9,7 @@ const Contactus = () => {
     <section style={{padding: "0"}} id="contact-section">
       <div className="banner center">
         <div className="banner-img-cover">
-          <h1 style={{color:'white'}}>Register To Get FREE Unit</h1>
+          <h1 style={{color:'white'}}>Register To Get FREE Units</h1>
         </div>
       </div>
       <div className="contactus container mt-4" style={{ paddingBottom: "30px"}}>

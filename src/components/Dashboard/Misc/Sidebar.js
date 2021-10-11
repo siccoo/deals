@@ -4,7 +4,16 @@ import history from "../../../assets/history.svg";
 import overview from "../../../assets/Home.svg";
 import profile from "../../../assets/profile.svg";
 import logout from "../../../assets/logout.svg";
+import { removeState } from "../../../utils/logOut";
+import { useHistory } from "react-router";
+
 export default function Sidebar() {
+  const history = useHistory();
+  function handleLogout () {
+    removeState();
+    history.push("/")
+ }
+
   return (
     <>
       <div className="i-dashboard-sidebar">
@@ -86,7 +95,7 @@ export default function Sidebar() {
             </div>
             <div className="i-power-list-col-text">PROFILE</div>
           </a>
-          <Link to="/" href="#" className="i-power-list-row ">
+          <div onClick={handleLogout} className="i-power-list-row ">
             <div className="i-power-list-col-icon">
               <svg
                 width="17"
@@ -106,7 +115,7 @@ export default function Sidebar() {
               </svg>
             </div>
             <div className="i-power-list-col-text">LOGOUT</div>
-          </Link>
+          </div>
         </div>
       </div>
     </>

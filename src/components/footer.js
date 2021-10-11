@@ -8,7 +8,7 @@ export const AppFooter = () => {
       <div className="">
         <div
           className="space-top-2 space-bottom-1 space-bottom-lg-2 secondary-color"
-          style={{ padding: "0 10px" }}
+          style={{ padding: "0px 10px" }}
         >
           <div className="row justify-content-lg-between">
             <div className="col-md-">
