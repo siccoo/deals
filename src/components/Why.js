@@ -11,7 +11,7 @@ const Why = () => {
           <div className="home-note-div">
             <div className="note-img-1"></div>
             <div className="note-text">
-              <div className="note-text-header">Pay Less Get More Units</div>
+              <div className="note-text-header">Pay Less, Get More Units</div>
               <div className="note-text-sub">
                 Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr
               </div>
@@ -25,10 +25,10 @@ const Why = () => {
             <div className="note-img-2"></div>
             <div className="note-text">
               <div className="note-text-header">
-                Complete Transactions in Seconds
+                Complete Transactions In Seconds
               </div>
               <div className="note-text-sub">
-                Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr
+                Top up your electricity in 3 simple steps
               </div>
             </div>
           </div>
