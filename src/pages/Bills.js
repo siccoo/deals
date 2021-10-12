@@ -23,7 +23,7 @@ const Login = () => {
           <div className="banner-writeup">
             <div className="banner-heading">
               <div className="banner-header">Looking for a great value of electricity</div>
-              <div className="banner-sub">Lorem ipsum dolor sit amet,Aenean vel purus ligula,Lorem ipsum dolor sit amet,Aenean vel purus ligula</div>
+              <div className="banner-sub">Get value for your electricity purchases at all times, with no boundaries. </div>
             </div>
             <div className="banner-illustration">
               <img src={almost} alt="" className="banner-illus-bills"/>
