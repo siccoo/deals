@@ -11,15 +11,11 @@ export const AppFooter = () => {
           style={{ padding: "0px 10px" }}
         >
           <div className="row justify-content-lg-between">
-            <div className="col-md-">
-              
-            </div>
+            <div className="col-md-"></div>
             <div className="col-md-3">
               <div className="mb-4">
                 <h2 className="white-text">Contact Us</h2>
-                <p className="white-text mt-4">
-                  Lorem ipsum dolor sit amet, Aenean vel purus ligula
-                </p>
+                <p className="white-text mt-4">Email: hello@powerdeals.ng</p>
               </div>
               {/* <!-- End Logo -->
             <!-- Nav Link --> */}
@@ -27,7 +23,15 @@ export const AppFooter = () => {
                 <li className="nav-item">
                   <a className="nav-link media" href=".">
                     <span className="media">
-                      <span className="fas fa-location-arrow mt-1 mr-2 white-text"></span>
+                      <span className="fab fa-instagram mt-1 mr-2 white-text"></span>
+                    </span>
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link media" href=".">
+                    <span className="media">
+                      <span className="fab fa-twitter mt-1 mr-2 white-text"></span>
                     </span>
                   </a>
                 </li>
@@ -35,7 +39,7 @@ export const AppFooter = () => {
                 <li className="nav-item">
                   <a className="nav-link media" href="tel:1-062-109-9222">
                     <span className="media">
-                      <span className="fas fa-phone-alt mt-1 mr-2 white-text"></span>
+                      <span className="fab fa-facebook-f mt-1 mr-2 white-text"></span>
                     </span>
                   </a>
                 </li>
@@ -46,7 +50,7 @@ export const AppFooter = () => {
                     href="mailto:contactus@edulearn.com"
                   >
                     <span className="media">
-                      <span className="fas fa-envelope-open mt-1 mr-2 white-text"></span>
+                      <span className="far fa-envelope mt-1 mr-2 white-text"></span>
                     </span>
                   </a>
                 </li>

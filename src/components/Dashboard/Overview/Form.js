@@ -1,6 +1,11 @@
 import React from "react";
+import electricityServiceList from "../../electricityList/electricityList";
 
 export default function Form(props) {
+  // const electricityList = Object.keys(electricityServiceList).map((key) => ({
+  //   name: key,
+  // }));
+  // console.log(electricityList);
   return (
     <>
       <div className="content-form-div">
@@ -50,7 +55,7 @@ export default function Form(props) {
                   <span className="form-col-spotlight">Service Disco </span>{" "}
                   <span className="form-col-required">*</span>
                 </div>
-                <input
+                {/* <input
                   type="text"
                   className="i-power-form-textfield w-input"
                   maxlength="256"
@@ -59,7 +64,18 @@ export default function Form(props) {
                   placeholder="Example Text"
                   id="field-2"
                   required=""
-                />
+                /> */}
+                <div 
+                  className="i-power-form-textfield w-input"
+                  placeholder="Example Text"
+                >
+                  <div>
+                    <span></span>
+                  </div>
+                  <div>
+                    <p className="title"></p>
+                  </div>
+                </div>
               </div>
               <div className="i-power-form-col _2"></div>
             </div>

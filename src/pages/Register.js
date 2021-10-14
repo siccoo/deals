@@ -7,50 +7,69 @@ import showpass from "../assets/img/showpass.svg";
 import hidepass from "../assets/img/hidepass.svg";
 import "../assets/css/login.css";
 import AppHeader from "../components/navbar.js";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 // import ServiceCard from "../components/ServiceCard";
 import "../assets/css/home.css";
 import { AppFooter } from "../components/footer.js";
-import {useForm} from "../hooks/useForm";
+import { useForm } from "../hooks/useForm";
+import Loader from "../components/Loader";
 import makeAPICall from "../utils/powerDealsApi";
-import { setAuth } from "../utils/constant";
 
 const initialValues = {
   email: "",
+  first_name: "",
+  last_name: "",
+  phone_number: "",
   password: "",
+  password_confirmation: "",
+  pin: "",
+  pin_confirmation: "",
 };
 
-const Login = () => {
+const Register = () => {
   const [pwd, setPwd] = useState("");
   const [isRevealPwd, setIsRevealPwd] = useState(false);
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
   const { values, handleChange, setValues } = useForm(initialValues);
-  const history = useHistory();
 
-  const loginButton = (e) => {
+  const registerButton = (e) => {
     e.preventDefault();
+    setIsButtonLoading(true);
     const data = {
       email: "otokinaodafe@gmail.com",
+      first_name: "Godwin",
+      last_name: "Otokinia",
+      phone_number: "08136293752",
       password: "123456",
+      password_confirmation: "123456",
+      pin: "1234",
+      pin_confirmation: "1234",
     };
+    console.log(data);
     return makeAPICall({
-      path: "user/login",
+      path: "user/create",
       payload: data,
       method: "POST",
     })
       .then((res) => {
         console.log(res);
-        const authInfo = {
-          email: res.data.email,
-          first_name: res.data.first_name,
-          last_name: res.data.last_name,
-          agent_id: res.data.agent_id,
-          user_type: res.data.user_type,
-          token: res.data.token,
-        };
-        setAuth(authInfo);
-        // history.push("/dashboard");
+        setIsButtonLoading(false);
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {
+        setIsButtonLoading(false);
+        // console.log(err.message)
+      });
+
+    // setValues({
+    //   email: "",
+    //   first_name: "",
+    //   last_name: "",
+    //   phone_number: "",
+    //   password: "",
+    //   password_confirmation: "",
+    //   pin: "",
+    //   pin_confirmation: "",
+    // });
   };
 
   return (
@@ -71,11 +90,35 @@ const Login = () => {
             </div>
           </div>
           <div className="banner-form">
-            <div className="banner-form-div">
-              <div className="banner-form-div-header">Hello</div>
-              <div className="banner-form-div-header">Please Login</div>
+            <div className="banner-form-div-register">
+              <div className="banner-form-div-header">Welcome,</div>
+              <div className="banner-form-div-header">
+                Please Fill This Form
+              </div>
               <br />
               <form>
+                <div className="form-group mt-3">
+                  <label className="formlabel black-text">Full name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="formGroupExampleInput"
+                    placeholder=""
+                    value={values.fullName}
+                    onChange={handleChange}
+                  />
+                </div>{" "}
+                <div className="form-group mt-3">
+                  <label className="formlabel black-text">Phone number</label>
+                  <input
+                    type="tel"
+                    className="form-control"
+                    id="formGroupExampleInput"
+                    placeholder=""
+                    value={values.phoneNumber}
+                    onChange={handleChange}
+                  />
+                </div>{" "}
                 <div className="form-group mt-3">
                   <label className="formlabel black-text">Email</label>
                   <input
@@ -83,6 +126,8 @@ const Login = () => {
                     className="form-control"
                     id="formGroupExampleInput"
                     placeholder=""
+                    value={values.email}
+                    onChange={handleChange}
                   />
                 </div>{" "}
                 <div className="form-group pwd-container mt-3">
@@ -92,7 +137,7 @@ const Login = () => {
                     name="pwd"
                     placeholder=""
                     type={isRevealPwd ? "text" : "password"}
-                    value={pwd}
+                    value={pwd && values.password}
                     onChange={(e) => setPwd(e.target.value)}
                   />
                   <img
@@ -101,12 +146,7 @@ const Login = () => {
                     src={isRevealPwd ? hidepass : showpass}
                     onClick={() => setIsRevealPwd((prevState) => !prevState)}
                   />
-                </div>
-                <div className="form-group right">
-                  <a href="/forgot_password" className="link-text">
-                    {" "}
-                    Forgot Password?
-                  </a>
+                  <p>Password Must Be At Least Minimum 8 Characters</p>
                 </div>
                 <div className="center mt-5">
                   <Link to="dashboard/overview">
@@ -119,18 +159,15 @@ const Login = () => {
                         width: "100%",
                         padding: "10px 100px",
                       }}
-                      onClick={loginButton}
+                      onClick={registerButton}
                     >
-                      Login
+                      {isButtonLoading ? <Loader dark={false} /> : "Register"}
                     </button>
                   </Link>
                 </div>
                 <div className="form-group text-right">
-                  Is it your first time here?
-                  <a href="/register">
-                    {" "}
-                    Register
-                  </a>
+                  Already registered?
+                  <a href="/login"> Login</a>
                 </div>
               </form>
             </div>
@@ -142,4 +179,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
