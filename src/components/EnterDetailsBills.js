@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const EnterDetailsBills = (props) => {
+
   return (
     <>
       <div className="bills-row">
@@ -106,7 +108,7 @@ const EnterDetailsBills = (props) => {
           style={{
             background: "#DE7949",
             border: "none",
-            color: "white",
+            color: "white !important",
             width: "100%",
             padding: "10px 100px",
           }}

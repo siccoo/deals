@@ -1,7 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "../hooks/useForm";
+
+const initialValues = {
+  meterNumber: "",
+};
 
 const Landing = () => {
+  const { values, handleChange, setValues } = useForm(initialValues);
+
+  const enterMeterNumber = (e) => {
+    e.preventDefault();
+
+  }
+
   return (
     <div className="meter-heading">
       <h1 className="landing-heading">
@@ -19,11 +31,13 @@ const Landing = () => {
             type="text"
             className="landing-input"
             placeholder="Input Meter Number"
+            value={values.meterNumber}
+            onChange={handleChange}
           />
         </div>
         <div className="meter-col-2">
           <Link role="button" to="/bills">
-            <div className="landing-btn">Enter</div>{" "}
+            <div className="landing-btn" onClick={enterMeterNumber}>Enter</div>{" "}
           </Link>
         </div>
       </div>
