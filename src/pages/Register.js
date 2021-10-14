@@ -17,13 +17,13 @@ import makeAPICall from "../utils/powerDealsApi";
 
 const initialValues = {
   email: "",
-  first_name: "",
-  last_name: "",
-  phone_number: "",
+  firstName: "",
+  lastName: "",
+  phoneNumber: "",
   password: "",
-  password_confirmation: "",
+  passwordConfirmation: "",
   pin: "",
-  pin_confirmation: "",
+  pinConfirmation: "",
 };
 
 const Register = () => {
@@ -36,14 +36,14 @@ const Register = () => {
     e.preventDefault();
     setIsButtonLoading(true);
     const data = {
-      email: "otokinaodafe@gmail.com",
-      first_name: "Godwin",
-      last_name: "Otokinia",
-      phone_number: "08136293752",
-      password: "123456",
-      password_confirmation: "123456",
-      pin: "1234",
-      pin_confirmation: "1234",
+      email: values.email,
+      first_name: values.firstName,
+      last_name: values.lastName,
+      phone_number: values.phoneNumber,
+      password: values.password,
+      password_confirmation: values.passwordConfirmation,
+      pin: values.pin,
+      pin_confirmation: values.pinConfirmation,
     };
     console.log(data);
     return makeAPICall({
@@ -146,7 +146,12 @@ const Register = () => {
                     src={isRevealPwd ? hidepass : showpass}
                     onClick={() => setIsRevealPwd((prevState) => !prevState)}
                   />
-                  <p>Password Must Be At Least Minimum 8 Characters</p>
+                  <p
+                    className="black-text"
+                    style={{ fontSize: "9px", textAlign: "right" }}
+                  >
+                    Password should be a minimum of 8 characters
+                  </p>
                 </div>
                 <div className="center mt-5">
                   <Link to="dashboard/overview">

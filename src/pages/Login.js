@@ -12,6 +12,7 @@ import { useHistory } from "react-router";
 import "../assets/css/home.css";
 import { AppFooter } from "../components/footer.js";
 import {useForm} from "../hooks/useForm";
+import Loader from "../components/Loader";
 import makeAPICall from "../utils/powerDealsApi";
 import { setAuth } from "../utils/constant";
 
@@ -23,14 +24,16 @@ const initialValues = {
 const Login = () => {
   const [pwd, setPwd] = useState("");
   const [isRevealPwd, setIsRevealPwd] = useState(false);
+  const [isButtonLoading, setIsButtonLoading] = useState(false);
   const { values, handleChange, setValues } = useForm(initialValues);
   const history = useHistory();
 
   const loginButton = (e) => {
     e.preventDefault();
+    setIsButtonLoading(true);
     const data = {
-      email: "otokinaodafe@gmail.com",
-      password: "123456",
+      email: values.email,
+      password: values.password,
     };
     return makeAPICall({
       path: "user/login",
@@ -39,6 +42,7 @@ const Login = () => {
     })
       .then((res) => {
         console.log(res);
+        setIsButtonLoading(false);
         const authInfo = {
           email: res.data.email,
           first_name: res.data.first_name,
@@ -50,7 +54,10 @@ const Login = () => {
         setAuth(authInfo);
         // history.push("/dashboard");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {
+        console.log(err.message)
+        setIsButtonLoading(false);
+      });
   };
 
   return (
@@ -83,6 +90,8 @@ const Login = () => {
                     className="form-control"
                     id="formGroupExampleInput"
                     placeholder=""
+                    value={values.email}
+                    onChange={handleChange}
                   />
                 </div>{" "}
                 <div className="form-group pwd-container mt-3">
@@ -92,7 +101,7 @@ const Login = () => {
                     name="pwd"
                     placeholder=""
                     type={isRevealPwd ? "text" : "password"}
-                    value={pwd}
+                    value={pwd && values.password}
                     onChange={(e) => setPwd(e.target.value)}
                   />
                   <img
@@ -121,7 +130,7 @@ const Login = () => {
                       }}
                       onClick={loginButton}
                     >
-                      Login
+                      {isButtonLoading ? <Loader dark={false} /> : "Login"}
                     </button>
                   </Link>
                 </div>
